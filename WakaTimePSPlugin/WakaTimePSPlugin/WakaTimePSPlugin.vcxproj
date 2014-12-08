@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{87463C71-62C9-4DD8-A494-62588C4B03DA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>WakaTimePSPlugin</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.8li</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.8li</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8li</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8li</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;WIN32=1;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_WINDOWS;MSWIndows=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\pluginsdk\photoshopapi\photoshop;..\..\pluginsdk\photoshopapi\pica_sp;..\Common\Include;..\Common\Includes;..\WindowsSrc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;version.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;WIN32=1;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_WINDOWS;MSWIndows=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\pluginsdk\photoshopapi\photoshop;..\..\pluginsdk\photoshopapi\pica_sp;..\Common\Include;..\Common\Includes;..\WindowsSrc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;version.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;WIN32=1;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_WINDOWS;MSWIndows=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\pluginsdk\photoshopapi\photoshop;..\..\pluginsdk\photoshopapi\pica_sp;..\Common\Include;..\Common\Includes;..\WindowsSrc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;version.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;WIN32=1;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_WINDOWS;MSWIndows=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\pluginsdk\photoshopapi\photoshop;..\..\pluginsdk\photoshopapi\pica_sp;..\Common\Include;..\Common\Includes;..\WindowsSrc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;version.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\WindowsSrc\Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Include\WakaTimeDefines.h" />
+    <ClInclude Include="..\WindowsSrc\CommonUtility.h" />
+    <ClInclude Include="..\WindowsSrc\INIReader.h" />
+    <ClInclude Include="..\WindowsSrc\resource.h" />
+    <ClInclude Include="..\WindowsSrc\stdafx.h" />
+    <ClInclude Include="..\WindowsSrc\targetver.h" />
+    <ClInclude Include="..\WindowsSrc\View.h" />
+    <ClInclude Include="..\WindowsSrc\WakaTimePlugin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\sources\DialogUtilitiesWin.cpp" />
+    <ClCompile Include="..\Common\sources\PIUActions.cpp" />
+    <ClCompile Include="..\Common\sources\PIUActionUtils.cpp" />
+    <ClCompile Include="..\Common\sources\PIUFile.cpp" />
+    <ClCompile Include="..\Common\sources\PIUGet.cpp" />
+    <ClCompile Include="..\Common\sources\PIUSelect.cpp" />
+    <ClCompile Include="..\Common\sources\PIUSuites.cpp" />
+    <ClCompile Include="..\Common\sources\PIUtilities.cpp" />
+    <ClCompile Include="..\Common\sources\PIUtilitiesWin.cpp" />
+    <ClCompile Include="..\Common\sources\PIWinUI.cpp" />
+    <ClCompile Include="..\WindowsSrc\dllmain.cpp" />
+    <ClCompile Include="..\WindowsSrc\WakaTimeScripting.cpp" />
+    <ClCompile Include="CommonUtility.cpp" />
+    <ClCompile Include="INIReader.cpp" />
+    <ClCompile Include="WakaTimePlugin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\Common\WakaTimePS.r">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl /I..\..\pluginsdk\PhotoshopAPI\PICA_SP /I..\..\pluginsdk\PhotoshopAPI\Photoshop   /I..\..\pluginsdk\PhotoshopAPI\Resources     /I..\Common\Resources    /I..\Common\Includes /I..\Common\Include /EP /DMSWindows=1 /Tc"%(FullPath)" &gt;     "$(ProjectDir)%(Filename).rr"
+..\..\pluginsdk\photoshopapi\resources\cnvtpipl "$(ProjectDir)%(Filename).rr" "$(ProjectDir)%(Filename).pipl"
+del "$(ProjectDir)%(Filename).rr"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl /I..\..\pluginsdk\PhotoshopAPI\PICA_SP /I..\..\pluginsdk\PhotoshopAPI\Photoshop   /I..\..\pluginsdk\PhotoshopAPI\Resources     /I..\Common\Resources    /I..\Common\Includes /I..\Common\Include /EP /DMSWindows=1 /Tc"%(FullPath)" &gt;     "$(ProjectDir)%(Filename).rr"
+..\..\pluginsdk\photoshopapi\resources\cnvtpipl "$(ProjectDir)%(Filename).rr" "$(ProjectDir)%(Filename).pipl"
+del "$(ProjectDir)%(Filename).rr"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /I..\..\pluginsdk\PhotoshopAPI\PICA_SP /I..\..\pluginsdk\PhotoshopAPI\Photoshop   /I..\..\pluginsdk\PhotoshopAPI\Resources     /I..\Common\Resources    /I..\Common\Includes /I..\Common\Include /EP /DMSWindows=1 /Tc"%(FullPath)" &gt;     "$(ProjectDir)%(Filename).rr"
+..\..\pluginsdk\photoshopapi\resources\cnvtpipl "$(ProjectDir)%(Filename).rr" "$(ProjectDir)%(Filename).pipl"
+del "$(ProjectDir)%(Filename).rr"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /I..\..\pluginsdk\PhotoshopAPI\PICA_SP /I..\..\pluginsdk\PhotoshopAPI\Photoshop   /I..\..\pluginsdk\PhotoshopAPI\Resources     /I..\Common\Resources    /I..\Common\Includes /I..\Common\Include /EP /DMSWindows=1 /Tc"%(FullPath)" &gt;     "$(ProjectDir)%(Filename).rr"
+..\..\pluginsdk\photoshopapi\resources\cnvtpipl "$(ProjectDir)%(Filename).rr" "$(ProjectDir)%(Filename).pipl"
+del "$(ProjectDir)%(Filename).rr"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).pipl;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).pipl;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)%(Filename).pipl;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)%(Filename).pipl;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compiling PiPL resource...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compiling PiPL resource...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling PiPL resource...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compiling PiPL resource...</Message>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
